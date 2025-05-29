@@ -5,49 +5,58 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Embrulla | Smart Lead Revival</title>
+  <link rel="icon" href="https://emojiapi.dev/api/v1/rocket/64.png" />
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #0F172A;
       color: #F8FAF4;
+      scroll-behavior: smooth;
     }
     header {
       background-color: #0F172A;
-      padding: 2rem;
+      padding: 3rem 2rem 2rem;
       text-align: center;
+      animation: fadeInDown 1s ease;
     }
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin: 0;
       color: #FACC15;
     }
     header p {
       color: #CBD5E1;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
     }
     section {
-      padding: 2rem;
+      padding: 3rem 2rem;
     }
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
+      margin-top: 2rem;
     }
     .card {
       background: #1e293b;
       padding: 1.5rem;
       border-radius: 1rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
     }
     .card h3 {
       color: #38BDF8;
     }
     .cta {
       text-align: center;
-      padding: 2rem;
+      padding: 3rem 2rem;
       background-color: #FACC15;
       color: #0F172A;
+      animation: fadeInUp 1s ease;
     }
     .cta a {
       display: inline-block;
@@ -66,6 +75,14 @@
       background-color: #1e293b;
       color: #CBD5E1;
     }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -75,7 +92,7 @@
   </header>
 
   <section>
-    <h2>Why Embrulla?</h2>
+    <h2 style="text-align:center;">Why Embrulla?</h2>
     <div class="features">
       <div class="card">
         <h3>📊 Smart CRM</h3>
@@ -103,7 +120,7 @@
   <section class="cta">
     <h2>See It In Action</h2>
     <p>Book a free consultation and explore your revival ROI.</p>
-    <a href="https://calendly.com/embrulla/demo">Book a Demo</a>
+    <a href="https://calendly.com/embrulla/demo" target="_blank">Book a Demo</a>
   </section>
 
   <footer>
